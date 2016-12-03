@@ -6,7 +6,7 @@
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
    <bean id="HelloSpring" class="classes.HelloSpring" scope="prototype" init-method="init" destroy-method="destroy">
-       <property name="message" value="Hello Spring XXXX"/> 
+       <property name="message" value="Hello Spring initialize and destroy"/> 
    </bean>
 
 </beans>
