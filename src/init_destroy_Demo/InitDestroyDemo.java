@@ -13,5 +13,4 @@ public class InitDestroyDemo {
 		obj.showMessage();
 		appContext.registerShutdownHook();
 	}
-
 }

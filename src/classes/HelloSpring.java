@@ -1,6 +1,8 @@
 package classes;
 
-public class HelloSpring {
+import org.springframework.beans.factory.InitializingBean;
+
+public class HelloSpring implements InitializingBean {
 	private String message;
 
 	public String getMessage() {
@@ -21,5 +23,10 @@ public class HelloSpring {
 
 	public void destroy() {
 		System.out.println("Bean will destroy now.");
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("Initialize Bean by afterPropertiesSet Method");
 	}
 }
