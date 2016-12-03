@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="helloWorld" class="classes.HelloWorld">
+		<property name="message1" value="Hello World!" />
+		<property name="message2" value="Hello Second World!" />
+	</bean>
+
+	<bean id="helloOcean" class="classes.HelloOcean" parent="helloWorld">
+		<property name="message1" value="Value 1 Hello Ocean" />
+		<!-- <property name="message2" value="Value 2 Hello Ocean" /> -->
+		<property name="message3" value="value 3 Ocean" />
+	</bean>
+
+</beans>
