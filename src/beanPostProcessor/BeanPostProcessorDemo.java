@@ -12,7 +12,7 @@ public class BeanPostProcessorDemo {
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext("beanPostProcessor/BeanPostProcessor.xml");
 
 	      HelloSpring obj = (HelloSpring) context.getBean("HelloSpring");
-	      obj.getMessage();
+	      obj.showMessage();
 	      context.registerShutdownHook();
 		
 	}
