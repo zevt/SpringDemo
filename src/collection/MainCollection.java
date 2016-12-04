@@ -15,6 +15,14 @@ public class MainCollection {
 		jc.getAddressSet();
 		jc.getAddressMap();
 		jc.getAddressProp();
+		System.out.println(" --------------------------------------------------");
+		
+		ApplicationContext ctx2 = new ClassPathXmlApplicationContext("collection/BeansReference.xml");
+		JavaCollection jc2 = (JavaCollection)ctx2.getBean("referenceBeanCollection");
+		
+		jc2.getAddressList();
+		jc2.getAddressSet();
+		jc2.getAddressMap();
+		jc2.getAddressProp();
 	}
-
 }

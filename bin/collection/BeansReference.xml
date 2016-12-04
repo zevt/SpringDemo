@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="referenceBeanCollection" class="collection.JavaCollection">
+		<property name="addressList">
+			<list>
+				<ref bean="address1" />
+				<ref bean="address2" />
+				<value>USA</value>
+			</list>
+
+		</property>
+		<property name="addressSet">
+			<set>
+				<ref bean="address3" />
+				<ref bean="SetAddress4" />
+				<value>Russia</value>
+			</set>
+		</property>
+		<property name="addressMap">
+			<map>
+				<entry key="one" value="India" />
+				<entry key="two" value="USA" />
+				<entry key="three" value-ref="MapAddress value-ref" />
+			</map>
+		</property>
+
+
+	</bean>
+
+
+
+</beans>
