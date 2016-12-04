@@ -19,5 +19,4 @@ public class MainAnnoDI {
 		TextEditor tEditor = appCtx.getBean(TextEditor.class);
 		appCtx.registerShutdownHook();
 	}
-
 }

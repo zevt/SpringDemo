@@ -2,6 +2,7 @@ package annotationDependencyInjection;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class TextEditorConfig {
@@ -9,7 +10,9 @@ public class TextEditorConfig {
 	public TextEditor getTextEditor() {
 		return new TextEditor(createSpellingChecker());
 	}
-	@Bean SpellingChecker createSpellingChecker() {
+	@Bean(initMethod="init", destroyMethod="destroy") 
+	@Scope("singleton")
+	SpellingChecker createSpellingChecker() {
 		return new SpellingChecker();
 	}
 	
